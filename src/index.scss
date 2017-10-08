@@ -1,3 +1,10 @@
-body {
-  background-color: lightgrey;
-}
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+@import 'scss/variables';
+@import 'scss/general';
+
+@import 'app/stk-header/stk-header.component';
+@import 'app/stk-menu-button/stk-menu-button.component';
+@import 'app/stk-home/stk-home.component';
+@import 'app/stk-footer/stk-footer.component';

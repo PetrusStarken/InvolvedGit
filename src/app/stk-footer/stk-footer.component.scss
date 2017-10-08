@@ -1,0 +1,19 @@
+stk-footer {
+  
+  color: $text-light-color;
+
+  .social-links {
+    text-align: right;
+  }
+  
+  a.social-link {
+    padding: 0 10px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 3em;
+  
+    &:hover {
+      color: $highlight-color;    
+    }
+  }
+}

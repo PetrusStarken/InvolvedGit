@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: $background-color;
+}
+
+nav,
+footer.page-footer {
+  background-color: $primary-color;
+}
+
+main {
+  flex: 1 0 auto;
+}

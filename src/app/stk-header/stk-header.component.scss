@@ -1,0 +1,31 @@
+stk-header {
+
+  nav {
+    height: 104px;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .brand-logo {
+    i {
+      font-size: 3em;
+    }
+  }
+
+  .menu ul li {
+    margin-right: 10px;
+  }
+
+  .menu,
+  .menu-mobile {
+    text-transform: uppercase;
+  }
+
+  .button-collapse {
+    cursor: pointer;
+  }
+}
