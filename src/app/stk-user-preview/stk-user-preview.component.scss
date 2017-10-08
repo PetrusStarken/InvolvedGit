@@ -1,0 +1,41 @@
+stk-user-preview {
+  .user-preview {
+    display: flex;
+    flex-direction: row;
+
+    .avatar {
+      height: 90px;
+      width: 90px;
+      margin-right: 20px;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .user-name {
+        font-size: 20px;
+      }
+
+      .user-login {
+        color: #CCC2C2
+      }
+    }
+
+    .user-stats {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .card .card-action {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: $text-dark-color;
+    }
+  }
+}

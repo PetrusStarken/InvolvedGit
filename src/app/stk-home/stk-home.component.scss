@@ -1,21 +1,11 @@
 stk-home {
-  h1 {
-    text-align: center;
+  .nav-wrapper,
+  .nav-wrapper form,
+  .nav-wrapper form .input-field {
+    height: 100%;
   }
-  .objective {
 
-    .title {
-      font-size: 1.7rem;
-      font-weight: 500;
-      margin-top: 5px;
-      margin-bottom: 0;
-    }
-
-    i {
-      margin: 40px 0;
-      color: $highlight-color;
-      font-size: 7rem;
-      display: block;
-    }
+  .input-field i {
+    padding-left: 15px;
   }
 }

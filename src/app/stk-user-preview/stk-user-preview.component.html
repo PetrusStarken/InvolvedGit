@@ -1,0 +1,29 @@
+<div class="col s12 l6 xl4">
+  <div class="card">
+
+    <div class="card-content user-preview">
+
+      <a ng-href="user/{{$ctrl.user.login}}">
+        <img alt="@{{$ctrl.user.login}}" class="avatar" ng-src="{{$ctrl.user.avatar_url}}">
+      </a>
+
+      <div class="user-info">
+        <div>
+          <a href="user/{{$ctrl.user.login}}" class="user-name">{{$ctrl.user.name}}</a>
+          <span class="user-login"><em>@{{$ctrl.user.login}}</em></span>
+        </div>
+        
+        <div class="user-stats">
+          <div class="chip">Repositórios {{$ctrl.user.public_repos}}</div>
+          <div class="chip">Seguidores {{$ctrl.user.followers}}</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-action">
+      <a ng-href="{{$ctrl.user.html_url}}" target="_blank">Ver no GitHub</a>
+    </div>
+  </div>
+</div>
+

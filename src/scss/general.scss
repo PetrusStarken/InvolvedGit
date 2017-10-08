@@ -5,6 +5,12 @@ body {
   background: $background-color;
 }
 
+a {
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
 nav,
 footer.page-footer {
   background-color: $primary-color;
