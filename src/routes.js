@@ -11,5 +11,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('home', {
       url: '/',
       component: 'stkHome'
+    })
+    .state('challenge', {
+      url: '/challenge',
+      component: 'stkChallenge'
     });
 }
