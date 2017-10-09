@@ -5,7 +5,10 @@
     templateUrl: 'app/stk-user-preview/stk-user-preview.component.html',
     controller: userPreviewController,
     bindings: {
-      userLogin: '<'
+      userLogin: '<',
+      isDetails: '=',
+      isList: '=',
+      colClass: '@'
     }
   });
 
