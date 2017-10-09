@@ -23,13 +23,17 @@
 
 <body ng-app="app">
 
+
+
   <stk-header></stk-header>
 
+  <div class="load-bar" ng-show="loading">
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
   <main>
-    <div class="progress" ng-show="carregando">
-      <div class="indeterminate"></div>
-    </div>
-    <div class="container section" ng-view>
+    <div class="container section">
       <ui-view></ui-view>
     </div>
   </main>
