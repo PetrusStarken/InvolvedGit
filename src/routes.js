@@ -14,7 +14,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('challenge', {
       url: '/challenge',
-      component: 'stkChallenge'
+      component: 'pageChallenge'
     })
     .state('userRepositories', {
       url: '/git/:login',
