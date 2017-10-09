@@ -13,12 +13,12 @@
     return service;
 
     /* eslint-disable camelcase */
-    function _getUsers(userName, page) {
+    function _getUsers(userName, pagination) {
       var params = {
         q: userName + ' in:fullname:login',
         type: 'users',
-        page: page || 1,
-        per_page: 12
+        page: pagination.page || 1,
+        per_page: pagination.itemsPerPage || 12
       };
       return $http.get(config.githubApiUrl + 'search/users', {params: params, cache: true});
     }
