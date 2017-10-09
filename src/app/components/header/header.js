@@ -2,6 +2,6 @@
   'use strict';
 
   angular.module('app').component('stkHeader', {
-    templateUrl: 'app/stk-header/stk-header.component.html'
+    templateUrl: 'app/components/header/header.html'
   });
 })(angular);
