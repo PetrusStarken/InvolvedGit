@@ -2,6 +2,6 @@
   'use strict';
 
   angular.module('app').component('stkFooter', {
-    templateUrl: 'app/stk-footer/stk-footer.component.html'
+    templateUrl: 'app/components/footer/footer.html'
   });
 })(angular);
