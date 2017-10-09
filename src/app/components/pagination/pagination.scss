@@ -1,0 +1,28 @@
+stk-pagination {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination {
+    
+    li {
+      cursor: pointer;
+
+      &:last-child,
+      &:first-child {
+        padding: 0;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        cursor: default;
+      }
+
+      &.active {
+        background: $highlight-color;
+      }
+    }
+  }
+}

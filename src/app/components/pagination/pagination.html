@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="pagination-info">
+    {{$ctrl.paginationInfoMessage}}
+  </div>
+  <ul class="pagination">
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.first)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.first)"><i class="material-icons">first_page</i></a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.previous)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.previous)"><i class="material-icons">chevron_left</i></a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.prevSecond, true)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.prevSecond)">
+        {{$ctrl.pagination.pages.prevSecond}}
+      </a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.previous, true)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.previous)">
+        {{$ctrl.pagination.pages.previous}}
+      </a>
+    </li>
+
+    <li class="active">
+      <a>{{$ctrl.pagination.pages.active}}</a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.next, true)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.next)">
+        {{$ctrl.pagination.pages.next}}
+      </a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.nextSecond, true)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.nextSecond)">
+        {{$ctrl.pagination.pages.nextSecond}}
+      </a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.next)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.next)"><i class="material-icons">chevron_right</i></a>
+    </li>
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.last)">
+      <a ng-click="$ctrl.search($ctrl.pagination.pages.last)"><i class="material-icons">last_page</i></a>
+    </li>
+
+  </ul>
+</div>
