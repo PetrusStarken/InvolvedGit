@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app').component('stkMenuButton', {
-    templateUrl: 'app/stk-menu-button/stk-menu-button.component.html',
+    templateUrl: 'app/components/menu-button/menu-button.html',
     transclude: true,
     bindings: {
       url: '@'
