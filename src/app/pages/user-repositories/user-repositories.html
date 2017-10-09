@@ -1,9 +1,15 @@
 <div class="row" ng-show="!carregando">
 
+  <h1>Repositórios {{$ctrl.userLogin}}</h1>
+  <div class="divider"></div>
+
   <stk-user-preview user-login="$ctrl.userLogin" is-details="true" col-class="s12 m4 l3"></stk-user-preview>
 
   <div class="col s12 m8 l9">
+
     <stk-repo-preview repo="repo" ng-repeat="repo in $ctrl.repositories"></stk-repo-preview>
+
+    <stk-pagination ng-if="$ctrl.pagination.totalItems > 1" pagination="$ctrl.pagination" search-string="{{$ctrl.userLogin}}" search-function="$ctrl.setUserRepositories"></stk-pagination>
   </div>
 
 </div>

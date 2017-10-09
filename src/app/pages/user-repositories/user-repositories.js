@@ -10,20 +10,27 @@
   function userDetailsController($stateParams, repositoryService) {
     var vm = this;
 
-    vm.userLogin = $stateParams.login;
+    vm.setUserRepositories = setUserRepositories;
 
     vm.$onInit = function () {
-      setUserRepositories($stateParams.login);
+      vm.userLogin = $stateParams.login;
+      vm.pagination = {
+        page: 1,
+        itemsPerPage: 5,
+        totalItems: 0
+      };
+
+      setUserRepositories(vm.userLogin, vm.pagination);
     };
 
-    function setUserRepositories(login) {
-      repositoryService.getRepositories(login)
+    function setUserRepositories(login, pagination) {
+      repositoryService.getRepositories(login, pagination)
         .then(onSuccess)
         .catch(onError);
 
       function onSuccess(res) {
+        vm.pagination.totalItems = res.data.total_count;
         vm.repositories = res.data.items;
-        vm.totalRepositories = res.data.total_count;
       }
 
       function onError() {

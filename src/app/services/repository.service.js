@@ -13,11 +13,11 @@
     return service;
 
     /* eslint-disable camelcase */
-    function _getRepositories(userName, page) {
+    function _getRepositories(userName, pagination) {
       var params = {
         q: 'user:' + userName,
-        page: page || 1,
-        per_page: 10
+        page: pagination.page || 1,
+        per_page: pagination.itemsPerPage
       };
       return $http.get(config.githubApiUrl + 'search/repositories', {params: params, cache: true});
     }
