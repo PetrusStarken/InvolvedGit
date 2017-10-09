@@ -23,7 +23,7 @@
 
 <body ng-app="app">
 
-
+  <stk-login></stk-login>
 
   <stk-header></stk-header>
 
@@ -47,6 +47,16 @@
 <!-- run `gulp inject` to automatically populate bower script dependencies -->
 <!-- endbower -->
 <!-- endbuild -->
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAYbc-hW75TMHls-HeFUstbDk90ZeZ0Px8",
+    authDomain: "involved-git.firebaseapp.com",
+    projectId: "involved-git"
+  };
+  firebase.initializeApp(config);
+</script>
 
 <!-- build:js({.tmp,src}) scripts/app.js -->
 <!-- inject:js -->
