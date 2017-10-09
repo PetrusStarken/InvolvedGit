@@ -17,7 +17,7 @@
       var params = {
         q: userName + ' in:fullname:login',
         type: 'users',
-        page: page,
+        page: page || 1,
         per_page: 12
       };
       return $http.get(config.githubApiUrl + 'search/users', {params: params, cache: true});
