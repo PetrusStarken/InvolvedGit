@@ -18,6 +18,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('userRepositories', {
       url: '/git/:login',
-      component: 'stkUserRepositories'
+      component: 'pageUserRepositories'
     });
 }

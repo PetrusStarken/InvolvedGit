@@ -1,8 +1,8 @@
 (function (angular) {
   'use strict';
 
-  angular.module('app').component('stkUserRepositories', {
-    templateUrl: 'app/stk-user-repositories/stk-user-repositories.component.html',
+  angular.module('app').component('pageUserRepositories', {
+    templateUrl: 'app/pages/user-repositories/user-repositories.html',
     controller: userDetailsController
   });
 
