@@ -11,5 +11,6 @@
   </nav>
 </div>
 <div class="row">
-  <stk-users-list users="$ctrl.users"></stk-users-list>
+  <div class="divider"></div>
+  <stk-user-preview user-login="user.login" is-list="true" col-class="s12 l6 xl4" ng-repeat="user in $ctrl.users"></stk-user-preview>
 </div>
