@@ -46,3 +46,16 @@ main {
   margin-bottom: 5px;
   margin-right: 5px;
 }
+
+.not-found {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 40px;
+
+  em {
+    background: yellow;
+    padding: 0 10px 0 5px;
+  }
+}

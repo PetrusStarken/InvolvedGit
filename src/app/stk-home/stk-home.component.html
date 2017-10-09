@@ -3,7 +3,7 @@
     <div class="nav-wrapper">
       <form>
         <div class="input-field">
-          <input id="search" type="search" placeholder="buscar no GitHub" ng-model="searchString" ng-change="$ctrl.searchOnGit(searchString)">
+          <input id="search" type="search" placeholder="buscar no GitHub" ng-model="$ctrl.searchString" ng-change="$ctrl.searchOnGit($ctrl.searchString)" ng-model-options="{debounce: 750}">
           <label for="search"><i class="material-icons">search</i></label>
         </div>
       </form>
@@ -13,4 +13,9 @@
 <div class="row">
   <div class="divider"></div>
   <stk-user-preview user-login="user.login" is-list="true" col-class="s12 l6 xl4" ng-repeat="user in $ctrl.users"></stk-user-preview>
+  <div class="not-found" ng-if="$ctrl.notFound && $ctrl.searchString">
+    Quem? <em>{{$ctrl.searchString}}?</em>
+    <img src="images/not-found/jhon-lego.gif" />
+    Não conheço =/
+  </div>
 </div>
