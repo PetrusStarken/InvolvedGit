@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-content">
+    <div class="repo-title">{{$ctrl.repo.name}}</div>
+    <div class="repo-description">{{$ctrl.repo.description}}</div>
+  </div>
+  <div class="card-action">
+    <div class="chips">
+      <div class="chip" ng-show="repo.language">
+        {{$ctrl.repo.language}}
+      </div>
+      <div class="chip">
+        <i class="fa fa-code-fork"></i> {{$ctrl.repo.forks_count}} forks
+      </div>
+      <div class="chip">
+        <i class="fa fa-star"></i> {{$ctrl.repo.stargazers_count}} stars
+      </div>
+    </div>
+    <a ng-href="{{$ctrl.repo.html_url}}" target="_blank">Ver código fonte</a>
+  </div>
+</div>

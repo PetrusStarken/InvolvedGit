@@ -1,0 +1,12 @@
+stk-repo-preview {
+  .card-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .repo-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

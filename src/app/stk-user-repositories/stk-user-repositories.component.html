@@ -1,0 +1,9 @@
+<div class="row" ng-show="!carregando">
+
+  <stk-user-preview user-login="$ctrl.userLogin" is-details="true" col-class="s12 m4 l3"></stk-user-preview>
+
+  <div class="col s12 m8 l9">
+    <stk-repo-preview repo="repo" ng-repeat="repo in $ctrl.repositories"></stk-repo-preview>
+  </div>
+
+</div>

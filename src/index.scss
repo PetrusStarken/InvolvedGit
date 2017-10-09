@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 @import 'scss/variables';
@@ -9,4 +8,5 @@
 @import 'app/stk-home/stk-home.component';
 @import 'app/stk-challenge/stk-challenge.component';
 @import 'app/stk-user-preview/stk-user-preview.component';
+@import 'app/stk-repo-preview/stk-repo-preview.component';
 @import 'app/stk-footer/stk-footer.component';
