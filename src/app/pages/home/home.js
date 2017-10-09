@@ -1,8 +1,8 @@
 (function (angular) {
   'use strict';
 
-  angular.module('app').component('stkHome', {
-    templateUrl: 'app/stk-home/stk-home.component.html',
+  angular.module('app').component('pageHome', {
+    templateUrl: 'app/pages/home/home.html',
     controller: homeController
   });
 

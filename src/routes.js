@@ -10,7 +10,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      component: 'stkHome'
+      component: 'pageHome'
     })
     .state('challenge', {
       url: '/challenge',
