@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app').component('stkUserPreview', {
-    templateUrl: 'app/stk-user-preview/stk-user-preview.component.html',
+    templateUrl: 'app/components/user-preview/user-preview.html',
     controller: userPreviewController,
     bindings: {
       userLogin: '<',
