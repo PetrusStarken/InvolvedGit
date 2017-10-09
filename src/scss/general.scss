@@ -52,7 +52,11 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 40px;
+  font-size: 25px;
+
+  @media ($mq-small) {
+    font-size: 40px;
+  }
 
   em {
     background: yellow;
