@@ -17,18 +17,8 @@ stk-user-preview {
     }
   }
 
-  .card .card-action {
-    display: flex;
-    flex-direction: row;
-
-    a {
-      color: $text-dark-color;
-      text-transform: uppercase;
-
-      &:hover {
-        color: $highlight-color;
-      }
-    }
+  .card .card-action a {
+    text-transform: uppercase;
   }
 
   .user-info {

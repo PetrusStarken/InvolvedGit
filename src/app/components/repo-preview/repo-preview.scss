@@ -1,10 +1,8 @@
 stk-repo-preview {
-  .card-action {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .card-action a {
+    align-self: flex-end;
   }
-
+  
   .repo-title {
     font-size: 20px;
     font-weight: bold;

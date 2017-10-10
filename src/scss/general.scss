@@ -22,7 +22,12 @@ main {
 
 .card .card-action {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  @media ($mq-small) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   a {
     color: $text-dark-color;
