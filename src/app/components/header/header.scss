@@ -1,18 +1,36 @@
 stk-header {
 
   nav {
-    height: 104px;
+    height: 85px;
+
+    @media ($mq-medium) {
+      height: 104px;
+    }
+
+    .brand-logo {
+      left: auto;
+      transform: none;
+      position: unset;
+
+      i {
+        font-size: 1.5em;
+  
+        @media ($mq-medium) {
+          font-size: 3em;
+        }
+      }
+    }
   }
 
   .nav-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-  }
+    justify-content: space-between;
+    margin: 0 20px;
 
-  .brand-logo {
-    i {
-      font-size: 3em;
+    @media ($mq-medium) {
+      justify-content: space-around;
+      margin: 0;
     }
   }
 
