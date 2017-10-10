@@ -32,6 +32,7 @@
 
         if (userNotFound) {
           delete vm.users;
+          vm.showPagination = false;
           return;
         }
 
