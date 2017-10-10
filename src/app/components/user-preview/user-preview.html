@@ -3,18 +3,20 @@
 
     <div class="card-content user-preview">
 
-      <a ng-href="git/{{$ctrl.user.login}}">
+      <a ng-href="git/{{$ctrl.user.login}}" class="hide-on-med-and-down">
         <img alt="@{{$ctrl.user.login}}" class="avatar" ng-src="{{$ctrl.user.avatar_url}}">
       </a>
 
       <div class="user-info">
-        <div>
-          <a href="git/{{$ctrl.user.login}}" class="user-name">{{$ctrl.user.name}}</a>
-          <span class="user-login">
-            {{$ctrl.user.login}}
-          </span>
+
+        <div class="user-name">
+          <a href="git/{{$ctrl.user.login}}" class="user-name">{{$ctrl.user.name || $ctrl.user.login}}</a>
         </div>
-        
+
+        <span class="user-login" ng-if="$ctrl.user.name">
+          {{$ctrl.user.login}}
+        </span>
+
         <div class="user-stats">
           <div class="chip">Repositórios {{$ctrl.user.public_repos}}</div>
           <div class="chip">Seguidores {{$ctrl.user.followers}}</div>
