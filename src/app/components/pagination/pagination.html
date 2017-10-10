@@ -2,50 +2,51 @@
   <div class="pagination-info">
     {{$ctrl.paginationInfoMessage}}
   </div>
-  <ul class="pagination">
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.first)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.first)"><i class="material-icons">first_page</i></a>
+  <ul class="pagination" ng-show="$ctrl.showPagination">
+
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.first)">
+      <a ng-click="$ctrl.search($ctrl.pages.first)"><i class="material-icons">first_page</i></a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.previous)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.previous)"><i class="material-icons">chevron_left</i></a>
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.previous)">
+      <a ng-click="$ctrl.search($ctrl.pages.previous)"><i class="material-icons">chevron_left</i></a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.prevSecond, true)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.prevSecond)">
-        {{$ctrl.pagination.pages.prevSecond}}
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.prevSecond, true)">
+      <a ng-click="$ctrl.search($ctrl.pages.prevSecond)">
+        {{$ctrl.pages.prevSecond}}
       </a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.previous, true)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.previous)">
-        {{$ctrl.pagination.pages.previous}}
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.previous, true)">
+      <a ng-click="$ctrl.search($ctrl.pages.previous)">
+        {{$ctrl.pages.previous}}
       </a>
     </li>
 
     <li class="active">
-      <a>{{$ctrl.pagination.pages.active}}</a>
+      <a>{{$ctrl.pages.active}}</a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.next, true)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.next)">
-        {{$ctrl.pagination.pages.next}}
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.next, true)">
+      <a ng-click="$ctrl.search($ctrl.pages.next)">
+        {{$ctrl.pages.next}}
       </a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.nextSecond, true)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.nextSecond)">
-        {{$ctrl.pagination.pages.nextSecond}}
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.nextSecond, true)">
+      <a ng-click="$ctrl.search($ctrl.pages.nextSecond)">
+        {{$ctrl.pages.nextSecond}}
       </a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.next)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.next)"><i class="material-icons">chevron_right</i></a>
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.next)">
+      <a ng-click="$ctrl.search($ctrl.pages.next)"><i class="material-icons">chevron_right</i></a>
     </li>
 
-    <li ng-class="$ctrl.getPaginationClass($ctrl.pagination.pages.last)">
-      <a ng-click="$ctrl.search($ctrl.pagination.pages.last)"><i class="material-icons">last_page</i></a>
+    <li ng-class="$ctrl.getPaginationClass($ctrl.pages.last)">
+      <a ng-click="$ctrl.search($ctrl.pages.last)"><i class="material-icons">last_page</i></a>
     </li>
 
   </ul>
