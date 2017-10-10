@@ -13,6 +13,7 @@
     vm.searchOnGit = searchOnGit;
 
     vm.$onInit = function () {
+      vm.showPagination = false;
       vm.pagination = {
         page: 1,
         itemsPerPage: 9,
@@ -30,11 +31,14 @@
         vm.notFound = userNotFound;
 
         if (userNotFound) {
+          delete vm.users;
           return;
         }
 
         vm.pagination.totalItems = res.data.total_count;
         vm.users = res.data.items;
+
+        vm.showPagination = true;
       });
     }
   }

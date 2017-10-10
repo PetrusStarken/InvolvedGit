@@ -18,7 +18,7 @@
       <stk-user-preview user-login="user.login" is-list="true" col-class="s12 l6 xl4" ng-repeat="user in $ctrl.users"></stk-user-preview>
     </div>
 
-    <stk-pagination ng-if="$ctrl.pagination.totalItems > 1" pagination="$ctrl.pagination" search-string="{{$ctrl.searchString}}" search-function="$ctrl.searchOnGit"></stk-pagination>
+    <stk-pagination ng-if="$ctrl.showPagination" pagination="$ctrl.pagination" search-string="{{$ctrl.searchString}}" search-function="$ctrl.searchOnGit"></stk-pagination>
 
   </div>
 

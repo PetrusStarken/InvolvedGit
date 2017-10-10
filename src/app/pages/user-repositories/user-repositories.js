@@ -13,6 +13,7 @@
     vm.setUserRepositories = setUserRepositories;
 
     vm.$onInit = function () {
+      vm.showPagination = false;
       vm.userLogin = $stateParams.login;
       vm.pagination = {
         page: 1,
@@ -31,6 +32,7 @@
       function onSuccess(res) {
         vm.pagination.totalItems = res.data.total_count;
         vm.repositories = res.data.items;
+        vm.showPagination = true;
       }
 
       function onError() {
