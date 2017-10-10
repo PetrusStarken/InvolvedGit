@@ -1,0 +1,14 @@
+page-user-repositories {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+
+    @media ($mq-small) {
+      font-size: 3rem;  
+    }
+    
+    @media ($mq-medium) {
+      font-size: 4rem;  
+    }
+  }
+}
