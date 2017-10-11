@@ -55,3 +55,8 @@ button:focus {
 .waves-effect.waves-involved .waves-ripple {
   background-color: rgba($highlight-color, 0.4);
 }
+
+.toast {
+  background: $highlight-color;
+  color: $text-light-color;
+}

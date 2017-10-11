@@ -30,7 +30,7 @@
     };
 
     /** @ngIniject */
-    function userCommentsModalController($scope, $modalInstance, login) {
+    function userCommentsModalController($scope, $toast, login) {
       var vm = this;
 
       vm.login = login;
@@ -46,6 +46,8 @@
           createdDate: new Date()
         };
         vm.comments.push(commentModel);
+
+        $toast.show('Comentário adicionado', 5000);
 
         delete vm.comment;
       }
