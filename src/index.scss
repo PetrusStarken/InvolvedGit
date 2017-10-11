@@ -3,6 +3,7 @@
 
 @import 'scss/variables';
 @import 'scss/general';
+@import 'scss/materialize-overwrite.scss';
 
 @import 'app/components/header/header';
 @import 'app/components/menu-button/menu-button';
@@ -11,7 +12,7 @@
 @import 'app/components/footer/footer';
 @import 'app/components/pagination/pagination';
 @import 'app/components/user-not-found/user-not-found';
+@import 'app/components/user-comments/user-comments';
 
 @import 'app/pages/home/home';
 @import 'app/pages/challenge/challenge';
-@import 'app/pages/user-repositories/user-repositories';
