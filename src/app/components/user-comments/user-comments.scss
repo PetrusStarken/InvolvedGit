@@ -1,0 +1,26 @@
+stk-user-comments {
+  a {
+    cursor: pointer;
+  }
+}
+
+stk-user-comments-modal {
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .no-comments {
+    text-align: center;
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
+
+    .comment-date {
+      align-self: flex-end;
+      font-size: smaller;
+    }
+  }
+}
