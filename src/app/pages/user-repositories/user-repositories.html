@@ -1,15 +1,21 @@
-<div class="row" ng-show="!carregando">
+<div class="row">
 
-  <h1>Repositórios {{$ctrl.userLogin}}</h1>
-  <div class="divider"></div>
+  <div ng-if="$ctrl.userFound">
+    <h1>Repositórios {{$ctrl.userLogin}}</h1>
+    <div class="divider"></div>
 
-  <stk-user-preview user-login="$ctrl.userLogin" is-details="true" col-class="s12 m4 l3"></stk-user-preview>
+    <stk-user-preview user-login="$ctrl.userLogin" is-details="true" col-class="s12 m4 l3"></stk-user-preview>
 
-  <div class="col s12 m8 l9">
+    <div class="col s12 m8 l9">
 
-    <stk-repo-preview repo="repo" ng-repeat="repo in $ctrl.repositories"></stk-repo-preview>
+      <stk-repo-preview repo="repo" ng-repeat="repo in $ctrl.repositories"></stk-repo-preview>
 
-    <stk-pagination ng-if="$ctrl.showPagination" pagination="$ctrl.pagination" search-string="{{$ctrl.userLogin}}" search-function="$ctrl.setUserRepositories"></stk-pagination>
+      <stk-pagination ng-if="$ctrl.showPagination" pagination="$ctrl.pagination" search-string="{{$ctrl.userLogin}}" search-function="$ctrl.setUserRepositories"></stk-pagination>
+
+    </div>
   </div>
 
+  <stk-user-not-found show-error="!$ctrl.userFound">{{$ctrl.userLogin}}</stk-user-not-found>
+
+  <!-- <a href="/">Que tal fazer uma nova busca? Sigam-me os bons...</a> -->
 </div>
