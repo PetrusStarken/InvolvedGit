@@ -7,10 +7,10 @@ Teste de seleção para a Involves Florianópolis.
 Construir uma aplicação para consulta de perfis do GitHub.
 
 Principais requisitos:
- - ~Permitir a pesquis de usuários por nome e exibir o resultado da pesquisa na mesma página~
+ - Permitir a pesquis de usuários por nome e exibir o resultado da pesquisa na mesma página
  - Permitir que sejam feitas anotações sobre o usuário
- - ~Mostrar os repositórios do usuário de maneira páginada~
- - ~Mostrar página 404 quando o usuário não existir~
+ - Mostrar os repositórios do usuário de maneira páginada
+ - Mostrar página 404 quando o usuário não existir
  
 Pontos extras:
  - Testes unitários
@@ -23,24 +23,27 @@ Aplicação SPA construida com AngularJs
 ### O que foi implementado
 
  - Busca em tempo real de usuários por nome e/ou login
+ - Listagem paginada com todos os usuários encontrados
  - Card de usuário na busca com os seguintes dados
-   - Avatar
+   - Avatar (oculto quando for mobile)
    - Nome completo (caso possua)
    - Nome de usuário
    - Total de repositórios e forks
    - Link para visualizar o perfil no github
- - Listagem paginada com todos os usuários encontrados
- - Página com a listagem paginada com todos os repositórios do usuário
+ - Página com os detalhes do usuário e seus repositórios (somente criados pelo usuário)
+ - Listagem paginada com todos os repositórios do usuário
  - Card de repositórios com as seguintes informações
    - Nome do repositório
    - Descrição (caso haja)
    - Principal tecnologia utilizada
    - Total de forks e stars
    - Link para visualizar o repositório no GitHub
+ - Opção para visualizar e adicionar comentários sobre o usuário
+   - Mostrado em uma janela modal
    
 ### O que ainda falta implementar
 
- - Armazenar comentários para usuários
+ - Armazenar comentários para usuários em local storage
  - Escrever testes de unidade
  - ~Implementar autenticação utilizando OAuth~
    - Autenticação implementada no branch [oAuth](https://github.com/PetrusStarken/InvolvedGit/tree/oAuth) mas não funcional
