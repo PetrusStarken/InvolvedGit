@@ -22,10 +22,6 @@
 
   </div>
 
-  <div class="not-found" ng-if="$ctrl.notFound && $ctrl.searchString">
-    Quem? <em>{{$ctrl.searchString}}?</em>
-    <img class="responsive-img" src="images/not-found/jhon-lego.gif" alt="gif jhon travolta em lego" />
-    Não conheço =/
-  </div>
+  <stk-user-not-found show-error="($ctrl.notFound && $ctrl.searchString)">{{$ctrl.searchString}}</stk-user-not-found>
 
 </div>
