@@ -6,8 +6,8 @@
     controller: userPreviewController,
     bindings: {
       userLogin: '<',
-      isDetails: '=',
-      isList: '=',
+      isDetails: '<',
+      isList: '<',
       colClass: '@'
     }
   });
@@ -17,20 +17,15 @@
     var vm = this;
 
     vm.$onInit = function () {
-      setUserDetails(this.userLogin);
+      setUserDetails(this);
     };
 
-    function setUserDetails(userLogin) {
-      userService.getUser(userLogin)
-        .then(onSuccess)
-        .catch(onError);
+    function setUserDetails(ctrl) {
+      userService.getUser(ctrl.userLogin)
+        .then(onSuccess);
 
       function onSuccess(res) {
         vm.user = res.data;
-      }
-
-      function onError() {
-
       }
     }
   }
