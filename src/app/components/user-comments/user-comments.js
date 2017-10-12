@@ -5,53 +5,29 @@
     templateUrl: 'app/components/user-comments/user-comments.html',
     controller: userCommentsController,
     bindings: {
-      login: '@userLogin'
+      userId: '@',
+      userLogin: '@'
     }
   });
 
   function userCommentsController($modal) {
     var vm = this;
 
-    vm.$onInit = function () {
+    vm.openCommentsModal = function ($event, userId, userLogin) {
+      var modalTemplate = '<stk-user-comments-modal user-id="' + userId + '" user-login="' + userLogin + '"></stk-user-comments-modal>';
 
-    };
-
-    vm.openCommentsModal = function (login) {
-      var modalInstance = $modal.open({
-        templateUrl: 'app/components/user-comments/user-comments-modal.html',
-        controller: userCommentsModalController,
-        controllerAs: '$ctrl',
+      $modal.open({
+        template: modalTemplate,
+        anchorElement: $event ? angular.element($event.target) : undefined,
         resolve: {
-          login: function () {
-            return login;
+          userId: function () {
+            return userId;
+          },
+          userLogin: function () {
+            return userLogin;
           }
         }
       });
     };
-
-    /** @ngIniject */
-    function userCommentsModalController($scope, $toast, login) {
-      var vm = this;
-
-      vm.login = login;
-      vm.comments = [];
-
-      vm.addComment = addComment;
-
-      function addComment(comment) {
-        var commentModel = {
-          id: vm.comments.length,
-          message: comment,
-          login: vm.login,
-          createdDate: new Date()
-        };
-        vm.comments.push(commentModel);
-
-        $toast.show('Comentário adicionado', 5000);
-
-        delete vm.comment;
-      }
-    }
   }
-
 })(angular);
