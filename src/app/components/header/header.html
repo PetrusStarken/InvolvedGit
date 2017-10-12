@@ -17,18 +17,16 @@
       <div class="menu hide-on-med-and-down">
         <ul>
           <li><stk-menu-button url="challenge">O desafio</stk-menu-button></li>
-          <li><stk-menu-button url="solution">A solução</stk-menu-button></li>
         </ul>
       </div>
 
     </div>
 
     <div id="mobile-menu" ng-class="($ctrl.showMobileMenu ? 'mobile-menu show-mobile-menu' : 'mobile-menu')">
-      <a href="/" class="brand-logo"><i class="fa fa-github"></i></a>
+      <a href="/" class="brand-logo" ng-click="$ctrl.showHideMobileMenu()"><i class="fa fa-github"></i></a>
       <a href="javascript:void(0)" class="btn-close" ng-click="$ctrl.showHideMobileMenu()"><i class="material-icons">close</i></a>
       <a href="git/PetrusStarken" ng-click="$ctrl.showHideMobileMenu()">Meu repositórios</a>
       <a href="challenge" ng-click="$ctrl.showHideMobileMenu()">O desafio</a>
-      <a href="solution" ng-click="$ctrl.showHideMobileMenu()">A solução</a>
     </div>
 
   </nav>
