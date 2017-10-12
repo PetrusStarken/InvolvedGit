@@ -34,16 +34,77 @@ stk-header {
     }
   }
 
-  .menu ul li {
-    margin-right: 10px;
+  .button-collapse {
+    cursor: pointer;
   }
 
   .menu,
-  .menu-mobile {
+  .mobile-menu {
     text-transform: uppercase;
   }
 
-  .button-collapse {
-    cursor: pointer;
+  .mobile-menu.show-mobile-menu {
+    width: 100%;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      font-size: 25px;
+      color: $text-light-color;
+      display: block;
+      transition: 0.3s;
+
+      &:nth-child(n+3):after {
+        content: "";
+        background: $text-light-color;
+        display: block;
+        width: 60%;
+        height: 2px;
+        margin: auto;
+      }
+
+      &:hover,
+      &:focus {
+        color: $highlight-color;
+      }
+    }
+
+    .brand-logo {
+      margin-top: -20px;
+      margin-bottom: 20px;
+
+      i {
+        font-size: 3.5em;
+      }
+    }
+
+    .offcanvas a:focus{
+      color: $highlight-color;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+
+  .mobile-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $primary-color;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+    a {
+      display: none;
+    }
   }
 }
