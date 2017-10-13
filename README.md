@@ -40,11 +40,11 @@ Aplicação SPA construida com AngularJs
    - Link para visualizar o repositório no GitHub
  - Opção para visualizar e adicionar comentários sobre o usuário
    - Mostrado em uma janela modal
+ - Salvar comentários em local storage
    
 ### O que ainda falta implementar
 
- - Armazenar comentários para usuários em local storage
- - Escrever testes de unidade
+ - Escrever testes
  - ~Implementar autenticação utilizando OAuth~
    - Autenticação implementada no branch [oAuth](https://github.com/PetrusStarken/InvolvedGit/tree/oAuth) mas não funcional
 
