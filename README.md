@@ -1,6 +1,6 @@
 # Involved Git
 
-Teste de seleção para a Involves Florianópolis.
+Aplicativo web para busca de perfis no GitHub.
 
 ## [O desafio](https://involved-git.firebaseapp.com/challenge)
 
